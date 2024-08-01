@@ -1,7 +1,5 @@
 const APIURL = "https://restcountries.com/v3.1";
 
-let countriesData = [];
-
 async function fetchCountries() {
   let response = await fetch(`${APIURL}/all`);
   let data = await response.json();
@@ -17,14 +15,13 @@ async function fetchCountries() {
     return 0;
   });
 
-  countriesData = data;
-
   // Render the name of the countries in the DOM
   const countryList = document.getElementById("country-list");
   data.forEach((country) => {
+    const flagElement = `<img src = ${country.flags.svg} alt="Flag of ${country.name.common}" style="height: 1.25rem">`;
     const encodedName = encodeURIComponent(country.name.common);
     let listItem = document.createElement("li");
-    listItem.innerHTML = `<a href="#" onclick="showCountryInfo('${encodedName}')">${country.name.common}</a>`;
+    listItem.innerHTML = `<a href="#" onclick="showCountryInfo('${encodedName}')">${flagElement} ${country.name.common}</a>`;
     countryList.appendChild(listItem);
   });
 }
