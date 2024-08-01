@@ -4,12 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css"
+    />
     <title>Country info</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+    </style>
   </head>
   <body>
-    <h3>Learn more about countries!</h3>
+    <h2 id="title">Learn more about the world!</h2>
+    <div class="search">
+      <input type="text" id="search-input" placeholder="Search for a country" />
+      <button onclick="searchCountry ()"  id="searchButton">Search</button>
+    </div>
+
     <ul id="country-list"></ul>
     <div id="country-info" style="display: none"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

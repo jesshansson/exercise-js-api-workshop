@@ -5,17 +5,22 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  font-family: "Open Sans", sans-serif;
+  background-color: #f5ebe0;
   color: #333;
   line-height: 1.6;
   margin: 20px;
 }
 
-h3 {
+h2 {
+  color: #111111;
+  font-size: 2rem;
+}
+
+#title {
   text-align: center;
-  color: #666;
   margin-bottom: 10px;
+  font-family: "Caveat", cursive;
 }
 
 #country-list {
@@ -26,7 +31,7 @@ h3 {
 }
 
 #country-list li {
-  background: #fff;
+  background: #fefcf3;
   margin: 5px 0;
   padding: 10px;
   border: 1px solid #ddd;
@@ -69,7 +74,7 @@ h3 {
 
 #country-info img {
   margin-top: 10px;
-  max-width: 100px;
+  max-width: 200px;
   display: block;
 }
 
@@ -81,4 +86,32 @@ h3 {
 
 #country-info a:hover {
   text-decoration: underline;
+}
+
+.search {
+  text-align: center;
+}
+
+#search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  width: 200px;
+}
+
+#searchButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+  background-color: #0056b3;
 }
