@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+h3 {
+  text-align: center;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+#country-list {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#country-list li {
+  background: #fff;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+#country-list li:hover {
+  color: #007bff;
+}
+
+#country-list a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+#country-list a:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
+
+/* Landinformation */
+#country-info {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#country-info h2 {
+  margin-bottom: 15px;
+}
+
+#country-info p {
+  margin-bottom: 10px;
+}
+
+#country-info img {
+  margin-top: 10px;
+  max-width: 100px;
+  display: block;
+}
+
+#country-info a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#country-info a:hover {
+  text-decoration: underline;
+}
