@@ -82,21 +82,36 @@ function goBack() {
   document.getElementById("country-info").style.display = "none";
 }
 
-//Sökfunktion
+//Sökfunktion - improved search proposal fromGroup 7
 async function searchCountry() {
-  const searchInput = document.getElementById("search-input").value;
+  const searchInput = document.getElementById("search-input").value.trim();
+  if (searchInput.length < 2) {
+    alert("Please enter at least 2 characters");
+    return;
+  }
+ 
   try {
     let response = await fetch(`${APIURL}/name/${encodeURIComponent(searchInput)}`);
     if (!response.ok) {
       throw new Error("Country not found");
     }
-
+ 
     let data = await response.json();
-
+ 
     if (data.length === 0) {
       throw new Error("Country not found");
     }
-    showCountryInfo(encodeURIComponent(data[0].name.common));
+ 
+    // Filter the results to match more precisely
+    let matchingCountries = data.filter(country => 
+      country.name.common.toLowerCase().includes(searchInput.toLowerCase())
+    );
+ 
+    if (matchingCountries.length === 0) {
+      throw new Error("Country not found");
+    }
+ 
+    showCountryInfo(encodeURIComponent(matchingCountries[0].name.common));
   } catch (error) {
     alert(error.message);
   }
