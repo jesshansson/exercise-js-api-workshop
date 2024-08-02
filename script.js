@@ -89,32 +89,36 @@ async function searchCountry() {
     alert("Please enter at least 2 characters");
     return;
   }
- 
+
   try {
     let response = await fetch(`${APIURL}/name/${encodeURIComponent(searchInput)}`);
     if (!response.ok) {
       throw new Error("Country not found");
     }
- 
+
     let data = await response.json();
- 
+
     if (data.length === 0) {
       throw new Error("Country not found");
     }
- 
+
     // Filter the results to match more precisely
-    let matchingCountries = data.filter(country => 
+    let matchingCountries = data.filter((country) =>
       country.name.common.toLowerCase().includes(searchInput.toLowerCase())
     );
- 
+
     if (matchingCountries.length === 0) {
       throw new Error("Country not found");
     }
- 
+
     showCountryInfo(encodeURIComponent(matchingCountries[0].name.common));
   } catch (error) {
     alert(error.message);
   }
 }
+
+document.getElementById("searchButton").addEventListener("click", (e) => {
+  searchCountry();
+});
 
 fetchCountries();
