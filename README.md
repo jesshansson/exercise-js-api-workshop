@@ -1,50 +1,17 @@
 # API workshop
 
+View it live: https://jesshansson.github.io/exercise-js-api-workshop/
+
 ## Task
 
 Your group has been headhunted by a web development agency looking for fresh talent to help their customers fullfill their needs via projects. To make sure that you got what they are looking for, they have asked you to develop an application that are to be reviewed. The scale and complexityt of the application is up to you, but the company would like you to at least prove your worth in asyncronous programming by fetching and using data from a REST-API.
-To accommodate you in your search the company has provided you with a few suggestions:
 
-### Poké API
-
-```
-https://pokeapi.co/
-```
-
-### OMDB API - requires a key
-
-```
-https://www.omdbapi.com/
-```
-
-### Chuck Norris API
-
-```
-https://api.chucknorris.io/
-```
-
-### Dog API
-
-```
-https://dog.ceo/dog-api/
-```
-
-### Marvel API - requires a key
-
-```
-https://developer.marvel.com/
-```
+API used:
 
 ### REST Countries API
 
 ```
 https://restcountries.com/
-```
-
-### More suggestions
-
-```
-https://github.com/public-apis/public-apis
 ```
 
 ## Instructions
@@ -57,54 +24,9 @@ On day 3 you will get another project on your hands that you are to review, and 
 
 I want a full presentation of the reviewed application, including at least 2 things that you would have done differently, and 2 things that you think was very well done. Presentation should include both code review and a demonstration of the application.
 
-## Groups
-
-### Group 1
-
-Andrej,
-Alexandros,
-Arbnor,
-Isabelle
-
-### Group 2
-
-Max,
-Boel,
-Sara,
-Nunzia
-
-### Group 3
-
-Rasmus,
-Sofia,
-Jonatan,
-Johan S
-
-### Group 4
-
-Nino,
-Lovisa,
-Veselin,
-Joel,
-Hektor
-
-### Group 5
-
-Johan A,
-Mikalea,
-Yulia,
-Mattias
-
 ### Group 6
 
 Erik,
 Fanny,
 Jessica,
 Anton
-
-### Group 7
-
-Anna,
-Tatiana,
-Michael,
-Louise
